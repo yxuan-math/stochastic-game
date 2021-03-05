@@ -1,0 +1,28 @@
+{
+    "eqn_config": {
+      "eqn_name": "CovidMulti",
+      "total_time": 180,
+      "n_player": 3,
+      "num_time_interval": 40,
+      "population":[19540000,8910000,12810000],
+      "infected":[48462,22255,3577],
+      "theta":9.9e-1,
+      "unit":1e10,
+      "noise":2e-4,
+      "lockdowncost":1.726
+    },
+    "nn_config": {
+      "model_name": "CovidMultiModel",
+      "num_hiddens": [40, 40, 40],
+      "lr_values": [5e-4, 5e-5, 5e-6],
+      "lr_boundaries": [11000,20000],
+      "num_iterations": 25000,
+      "policy_freq": 100,
+      "batch_size": 256,
+      "valid_size": 256,
+     "logging_frequency": 100,
+      "weight_match":1e-3,
+      "verbose": true
+    }
+  }
+  
