@@ -1,4 +1,5 @@
 # stochastic-game
+
 1) To run the code for training, you could simply run "CUDA_VISIBLE_DEVICES=0 python3 main.py"  if you are using GPU 0.  The tuple of (step, player, validation loss of player) will be shown every "logging_frequency" steps in running.
 
 2) All the hyperparameters are in configs/CovidMulti3.json. Remarks:
