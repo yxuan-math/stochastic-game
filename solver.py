@@ -129,7 +129,7 @@ class CovidMultiModel(object):
                     learning_rate = tf.train.piecewise_constant(global_step,
                                                                 self.nn_config.lr_boundaries,
                                                                 self.nn_config.lr_values)
-                    # we use constant learning rate; if want to use decreasing learning rate:  
+                    # we use constant learning rate; for decreasing learning rate:  
                     # self.train_ops[i] = tf.train.AdamOptimizer(learning_rate).minimize(self.player_loss[i],global_step=global_step)                                          
                     self.train_ops[i] = tf.train.AdamOptimizer(learning_rate).minimize(self.player_loss[i])
                     
