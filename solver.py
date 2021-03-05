@@ -97,10 +97,7 @@ class CovidMultiModel(object):
                     self.y_list[i].append(y)
                     self.z_list[i].append(z)
                     self.l_list[i].append(l)
-                    # z_true = self.bsde.true_z(x_init, 0, player=i)
-                    # z_diff = tf.reduce_mean((z - z_true) ** 2)
-                    #z_mean = tf.reduce_mean(z_true)
-                    #z2_mean = tf.reduce_mean(z_true ** 2)
+
                     delta_l=0
                     for t in range(0, self.num_time_interval - 1):
                         l_star,h=self.new_policy(self.x[:, :, t],self.old_policy_evaluate[:,:,t],z,t,player=i)
